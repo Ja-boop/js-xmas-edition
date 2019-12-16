@@ -81,20 +81,42 @@ function validarFormulario(event) {
         }
     }
    
+    let hayErrores = false;
 
+    if(document.getElementById('errores').getElementsByTagName('li').length >= 1){
+        hayErrores = true
+    } else {
+        
+    }
+        
+    if(hayErrores = true){
+        document.getElementById('errores').innerHTML = ""
+    }else {
+        
+    }
 
     event.preventDefault();
 }
 
+
+
+    
+
+
+
+
+
 function manejarErrores(errores) {
+   
 
     const keys = Object.keys(errores);
     const $errores = document.querySelector('#errores')
     let cantidadErrores = 0;
+    
 
     keys.forEach(function (key) {
         const error = errores[key];
-
+        
         if (error) {    
             $form[key].className = "error"
             cantidadErrores++;
