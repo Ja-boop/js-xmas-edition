@@ -85,15 +85,13 @@ function validarFormulario(event) {
 
     if(document.getElementById('errores').getElementsByTagName('li').length >= 1){
         hayErrores = true
-    } else {
         
-    }
-        
-    if(hayErrores = true){
-        document.getElementById('errores').innerHTML = ""
-    }else {
-        
-    }
+        if(hayErrores = true){
+            document.getElementById('errores').innerHTML = ""
+        }
+    } 
+    
+    
 
     event.preventDefault();
 }
