@@ -86,7 +86,7 @@ function validarFormulario(event) {
     if(document.getElementById('errores').getElementsByTagName('li').length >= 1){
         hayErrores = true
         
-        if(hayErrores = true){
+        if(!hayErrores === false){
             document.getElementById('errores').innerHTML = ""
         }
     } 
