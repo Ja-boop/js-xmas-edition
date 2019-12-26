@@ -50,14 +50,18 @@ function validarDescripcionRegalo(descripcionRegalo) {
 
 }
 
-
-function validarFormulario(event) {
-
+function borrarErroresDeMas() {
     if(document.getElementById('errores').getElementsByTagName('li').length >= 1){
         
         document.getElementById('errores').innerHTML = ""
         
     } 
+}
+
+
+function validarFormulario(event) {
+
+    borrarErroresDeMas();
 
     const $form = document.querySelector("#carta-a-santa");
 
