@@ -52,6 +52,17 @@ function validarDescripcionRegalo(descripcionRegalo) {
 
 
 function validarFormulario(event) {
+
+    let hayErrores = false;
+
+    if(document.getElementById('errores').getElementsByTagName('li').length >= 1){
+        hayErrores = true
+        
+        if(hayErrores = true){
+            document.getElementById('errores').innerHTML = ""
+        }
+    } 
+
     const $form = document.querySelector("#carta-a-santa");
 
     const nombre = $form.nombre.value;
@@ -81,20 +92,32 @@ function validarFormulario(event) {
         }
     }
    
-
+    
+    
+    
 
     event.preventDefault();
 }
 
+
+
+    
+
+
+
+
+
 function manejarErrores(errores) {
+   
 
     const keys = Object.keys(errores);
     const $errores = document.querySelector('#errores')
     let cantidadErrores = 0;
+    
 
     keys.forEach(function (key) {
         const error = errores[key];
-
+        
         if (error) {    
             $form[key].className = "error"
             cantidadErrores++;
