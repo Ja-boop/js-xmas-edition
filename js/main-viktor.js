@@ -53,14 +53,12 @@ function validarDescripcionRegalo(descripcionRegalo) {
 
 function validarFormulario(event) {
 
-    let hayErrores = false;
+    
 
     if(document.getElementById('errores').getElementsByTagName('li').length >= 1){
-        hayErrores = true
         
-        if(hayErrores = true){
-            document.getElementById('errores').innerHTML = ""
-        }
+        document.getElementById('errores').innerHTML = ""
+        
     } 
 
     const $form = document.querySelector("#carta-a-santa");
