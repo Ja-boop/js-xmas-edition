@@ -53,8 +53,6 @@ function validarDescripcionRegalo(descripcionRegalo) {
 
 function validarFormulario(event) {
 
-    
-
     if(document.getElementById('errores').getElementsByTagName('li').length >= 1){
         
         document.getElementById('errores').innerHTML = ""
